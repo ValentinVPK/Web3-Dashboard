@@ -1,5 +1,6 @@
 import { Wallet } from "lucide-react";
 import { Link, useMatchRoute } from "@tanstack/react-router";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -11,7 +12,7 @@ const Navigation = () => {
 
   return (
     <nav className="px-4 md:px-6 bg-background">
-      <div className="flex items-stretch justify-between">
+      <div className="flex items-center justify-between">
         <div className="flex items-stretch gap-8">
           <div className="flex items-center gap-2 py-4">
             <Wallet width={24} height={24} stroke="var(--primary)" />
@@ -45,6 +46,7 @@ const Navigation = () => {
             })}
           </ul>
         </div>
+        <ThemeToggle />
       </div>
     </nav>
   );
