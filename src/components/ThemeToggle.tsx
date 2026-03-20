@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
+import { getLocalStorage, setLocalStorage } from "@/lib/localStorage";
 
 const ThemeToggle = () => {
   const [isDark, setIsDark] = useState(
-    document.documentElement.classList.contains("dark")
+    getLocalStorage("theme") === "dark" || false,
   );
 
   const handleToggle = (checked: boolean) => {
+    setLocalStorage("theme", checked ? "dark" : "light");
     setIsDark(checked);
     document.documentElement.classList.toggle("dark", checked);
   };
