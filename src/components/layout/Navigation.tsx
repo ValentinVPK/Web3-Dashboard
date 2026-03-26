@@ -1,7 +1,7 @@
 import { Wallet } from "lucide-react";
 import { Link, useMatchRoute } from "@tanstack/react-router";
 import ThemeToggle from "@/components/ThemeToggle";
-import ConnectWalletButton from "@/components/wallet/ConnectWalletButton";
+import ConnectWalletButton from "@/components/ConnectWalletButton";
 
 const navLinks = [
   { label: "Home", to: "/" },
